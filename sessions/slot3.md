@@ -12,7 +12,7 @@ Using sub-agents, running several agents at once, and an issue-board swarm that 
 
 ## Using sub-agents (10:15–10:50)
 
-Call the helper by name, give it one narrow instruction, keep it read-only and read its report before you act. You decide what to do with the report, as with two referees who don't talk to each other.
+Name the sub-agent and the bounds for this piece of work. It works in its own conversation and hands back what the job needs. These two reviewers may only read, and a review is what they hand back. You decide what to keep. Think of two research assistants: one reviews the cleaning, one checks the citations, and neither sees the other's notes.
 
 Run [`data-reviewer`](../.claude/agents/data-reviewer.md) and [`literature-reviewer`](../.claude/agents/literature-reviewer.md) on the Card–Krueger folder. Exercise: [`07_slot3_subagents_vc.md`](../exercises/07_slot3_subagents_vc.md), part A.
 

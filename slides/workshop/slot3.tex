@@ -21,18 +21,20 @@
 % ----------------------------------------------------------------
 \begin{frame}{Using sub-agents}
   \timebox{10:15--10:50}
-  \inplainwords{Call the helper by name, give it one narrow instruction, keep it
-    read-only and read its report before you act. You decide what to do with the report.}
-  \likethis{sending a draft to two referees who don't talk to each other.}
+  \inplainwords{Name the sub-agent and the bounds for this piece of work. It works
+    in its own conversation and hands back what the job needs. These two reviewers
+    may only read; a review is what they hand back. You decide what to keep.}
+  \likethis{two research assistants. One reviews the cleaning, one checks the
+    citations. Neither sees the other's notes.}
 \end{frame}
 
-\begin{frame}{Card--Krueger: two referee reports}
+\begin{frame}{Card--Krueger: two reviews}
   \prompttext{\raggedright Use the data-reviewer sub-agent on examples/card-krueger-toy/. Read only. Report panel balance and NJ/PA coding.}
   \vspace{0.4em}
   \prompttext{\raggedright Use the literature-reviewer sub-agent on the same folder. Read only. Check the claims against the references.}
   \vspace{0.6em}
   \begin{itemize}
-    \item Two separate notebooks: neither sees the other's report.
+    \item Two separate conversations: neither sees the other's review.
     \item Where they agree, look closer. Where they disagree, you decide.
   \end{itemize}
 \end{frame}
@@ -41,12 +43,12 @@
   \youtry{10:15--10:50}
   \vspace{0.3em}
   \begin{enumerate}
-    \item Run both helpers on the Card--Krueger folder.
+    \item Run both reviewers on the Card--Krueger folder.
     \item Log one finding you accept and one you reject in \artifact{notes/orchestration\_log.md}.
     \item Check that no file changed.
   \end{enumerate}
   \vspace{0.4em}
-  {\small Helper won't start? Paste its instructions into a fresh chat and say ``read only''.}\\
+  {\small Reviewer won't start? Paste its instructions into a fresh chat and say ``read only''.}\\
   {\small Guide: \artifact{demos/slot3\_subagents\_vc.md} \textperiodcentered\ \artifact{exercises/07\_slot3\_subagents\_vc.md}}
 \end{frame}
 

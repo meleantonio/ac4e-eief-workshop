@@ -30,7 +30,7 @@ Links below were checked for the EIEF / Luiss pack in September 2026 (with Codex
 - Overview and install: <https://code.claude.com/docs/en/overview>
 - Settings: <https://code.claude.com/docs/en/settings>
 - Skills (written procedures): <https://code.claude.com/docs/en/skills>
-- Subagents (second assistants with a narrow job): <https://code.claude.com/docs/en/sub-agents>
+- Subagents (another agent for a piece of the work, with its own conversation): <https://code.claude.com/docs/en/sub-agents>
 - Hooks: <https://code.claude.com/docs/en/hooks>
 - Extra tools (MCP, an extra data tool such as FRED): <https://code.claude.com/docs/en/mcp>
 - Native installer (macOS / Linux / WSL): `curl -fsSL https://claude.ai/install.sh | bash`

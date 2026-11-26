@@ -26,16 +26,20 @@ Worked example: `sample-restrictions-note`, which lists every rule that drops st
 
 ## Sub-agent vs Skill (Fri 09:35–09:55)
 
-A **sub-agent** is a separate helper agent with its own blank notebook and one narrow job. It reports back a summary. A Skill is instructions; a sub-agent is another worker: a recipe versus a sous-chef you send to taste the sauce.
+A **sub-agent** is another agent you hand a piece of the work. It has its own conversation and its own instructions. Inside the bounds you set, it can read, write, check, and decide. It hands back whatever that job needs: a cleaned file, a figure, a review, a pull request, or a short report. A summary is one possible result, not the definition.
 
-Example: [`data-reviewer`](../.claude/agents/data-reviewer.md) looks only at panel balance and group coding, and never edits. Exercise: part C.
+A **Skill** is a repeatable set of instructions followed in the same conversation. A sub-agent is a separate agent with a fresh context that carries out a piece of work on its own.
+
+Think of a research assistant who redoes the Card–Krueger sample, rebuilds the parallel-trends figure, or reviews the cleaning, and hands the result back.
+
+Example: [`data-reviewer`](../.claude/agents/data-reviewer.md) reviews panel balance and NJ/PA coding and hands back that review. That read-only bound is the job, not the definition. Exercise: part C.
 
 ## Rule of thumb (Fri 09:55–10:15)
 
-- Same steps, done the same way each time: **Skill**.
-- A fresh pair of eyes, a big messy job, or work that can run at the same time: **sub-agent**.
+- Use a **Skill** when the same steps should be reused in place.
+- Use a **sub-agent** when the piece of work needs its own focus, its own files, or would crowd the main conversation.
 
-"Recompute the DiD the same way each time" is a Skill. "Independently check my data coding" is a sub-agent. Exercise: part D.
+"Recompute the DiD the same way each time" is a Skill. "Redo the sample, or rebuild the parallel-trends figure, and hand back the file" is a sub-agent. Exercise: part D.
 
 ## Leave with
 

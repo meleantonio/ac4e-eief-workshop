@@ -23,7 +23,7 @@ Install steps are in [`SETUP.md`](../SETUP.md).
 ## Habits
 
 - Give each cloud agent its own separate copy (branch) and one issue card.
-- Keep sub-agents read-only (`readonly: true`).
+- The reviewer files set `readonly: true`. That is the bound for those jobs. A sub-agent can also write when the job asks for a file or a figure.
 - Read the list of changes and run the check command before you merge.
 
 Menu names change between versions. Check them in your installed version.

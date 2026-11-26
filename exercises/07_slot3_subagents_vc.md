@@ -4,9 +4,11 @@
 
 Write your answers in [`notes/orchestration_log.md`](../notes/orchestration_log.md).
 
-## A. Two referees (10:15–10:50)
+## A. Two reviewers (10:15–10:50)
 
-1. Run both helpers, read-only:
+These two are bounded to a review. A review is one result a sub-agent can hand back. A cleaned file or the parallel-trends figure is another.
+
+1. Run both reviewers. For this job, read only:
 
    ```text
    Use the data-reviewer sub-agent on examples/card-krueger-toy/.

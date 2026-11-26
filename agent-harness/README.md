@@ -6,14 +6,21 @@ rules file (`AGENTS.md`) plus Skills, sub-agents and checks.
 
 ## Skill or sub-agent?
 
-- **Skill** = saved instructions. Use one when the same steps should be done the
-  same way every time. Example: "Recompute the DiD the same way each time."
-- **Sub-agent** = a separate helper agent with its own blank notebook and one narrow
-  job. Use one when you need a fresh pair of eyes, a big messy job, or work that can
-  run at the same time. Example: "Independently check my data coding."
+- **Skill** = a repeatable set of instructions followed in the same conversation.
+  Use one when the same steps should be reused in place. Example: "Recompute the
+  DiD the same way each time."
+- **Sub-agent** = another agent you hand a piece of the work. It has its own
+  conversation and its own instructions. Inside the bounds you set, it can read,
+  write, check, and decide. It hands back whatever that job needs: a cleaned file,
+  a figure, a review, a pull request, or a short report. A summary is one possible
+  result, not the definition. Use one when the piece of work needs its own focus,
+  its own files, or would crowd the main conversation. Example: redo the
+  Card–Krueger sample, rebuild the parallel-trends figure, or review the cleaning,
+  and hand back the result.
 
-A Skill is instructions; a sub-agent is another worker. Either way, you read the
-result and you decide.
+A Skill stays in this conversation. A sub-agent is a separate agent with a fresh
+context that carries out a piece of work on its own. You set the bounds and you
+read what it hands back.
 
 ## Skills on the workshop path
 
@@ -28,14 +35,16 @@ Off the path: `literature-mapper` (optional mention only) and `sdd`.
 
 ## Sub-agents on the workshop path
 
-All are read-only: they report, they never edit.
+These four are bounded to a review. That bound is the job, not the definition of
+a sub-agent. A sub-agent can also write when the job asks for a cleaned file or
+the parallel-trends figure.
 
-| Sub-agent | One narrow job | Concept |
+| Sub-agent | What this one hands back | Concept |
 | --- | --- | --- |
-| `data-reviewer` | Panel balance, missing values, NJ/PA coding | Sub-agents, verification |
-| `literature-reviewer` | References and literature claims | Using sub-agents |
-| `pr-reviewer` | Reviews a returned pull request against its card | Issue-board swarm |
-| `loop-verifier` | One check-and-revise round (optional) | Verification |
+| `data-reviewer` | A review of panel balance, missing values, and NJ/PA coding | Sub-agents, verification |
+| `literature-reviewer` | A review of references and literature claims | Using sub-agents |
+| `pr-reviewer` | A review of a returned pull request against its card | Issue-board swarm |
+| `loop-verifier` | A pass/fail check and the next action (optional) | Verification |
 
 Off the path: `sdd-orchestrator`.
 

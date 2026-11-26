@@ -103,26 +103,41 @@ description: Use after any change to the Card-Krueger sample.
 % ----------------------------------------------------------------
 \begin{frame}{Sub-agent: what it is}
   \timebox{Fri 09:35--09:55}
-  \inplainwords{A sub-agent is a separate helper agent with its own blank notebook and
-    one narrow job. It reports back a summary. A Skill is instructions; a sub-agent
-    is another worker.}
-  \likethis{a recipe (Skill) vs a sous-chef you send to taste the sauce (sub-agent).}
+  \begin{block}{In plain words}
+    A sub-agent is another agent you hand a piece of the work. It has its own
+    conversation and its own instructions. Inside the bounds you set, it can read,
+    write, check, and decide. It hands back whatever that job needs: a cleaned file,
+    a figure, a review, a pull request, or a short report. A summary is one possible
+    result, not the definition.
+
+    A Skill is a repeatable set of instructions followed in the same conversation.
+    A sub-agent carries out the piece of work on its own, in a fresh context.
+  \end{block}
+  \vspace{0.4em}
+  {\textcolor{courseteal}{\textbf{Think of it as:}} a research assistant who redoes
+    the Card--Krueger sample, rebuilds the parallel-trends figure, or reviews the
+    cleaning, and hands the result back.}
 \end{frame}
 
 \begin{frame}{Card--Krueger: Skill vs sub-agent}
-  \begin{tabular}{@{}p{0.22\linewidth}p{0.34\linewidth}p{0.36\linewidth}@{}}
+  \small
+  \begin{tabular}{@{}p{0.18\textwidth}p{0.38\textwidth}p{0.38\textwidth}@{}}
     \toprule
      & \textbf{Skill} & \textbf{Sub-agent} \\
     \midrule
-    What it is & Instructions & Another worker \\
-    Memory & Shares your chat & Its own blank notebook \\
-    Gives back & The finished task & A short report \\
-    Our example & \artifact{replication-checker} & \artifact{data-reviewer} \\
+    What it is & Repeatable instructions, in this conversation & Another agent, with its own instructions \\
+    Where & Same conversation & Its own conversation (a fresh context) \\
+    Hands back & The steps, done in place & A file, a figure, a review, a pull request, or a short report \\
+    Example & \artifact{replication-checker} & \artifact{data-reviewer}, or the parallel-trends figure \\
     \bottomrule
   \end{tabular}
-  \vspace{0.6em}
 
-  \artifact{data-reviewer} looks only at panel balance and NJ/PA coding. It never edits.
+  \vspace{0.9em}
+  Inside the bounds you set, it can read, write, check, and decide.
+  A summary is one possible result, not the definition.
+
+  \vspace{0.35em}
+  \artifact{data-reviewer} is bounded to a review of panel balance and NJ/PA coding: no edits.
 \end{frame}
 
 \begin{frame}{Your turn}
@@ -130,19 +145,20 @@ description: Use after any change to the Card-Krueger sample.
   \vspace{0.3em}
   Open \artifact{.claude/agents/data-reviewer.md} and mark three things:
   \begin{enumerate}
-    \item \textbf{The job:} what does it look at?
-    \item \textbf{The limits:} what is it not allowed to do?
-    \item \textbf{The report:} what does it hand back?
+    \item \textbf{The job:} what piece of work is this?
+    \item \textbf{The limits:} what bounds did we set?
+    \item \textbf{What it hands back:} a review. Name one other result a sub-agent can hand back.
   \end{enumerate}
 \end{frame}
 
 % ----------------------------------------------------------------
 \begin{frame}{Rule of thumb: Skill or sub-agent?}
   \timebox{Fri 09:55--10:15}
-  \inplainwords{Same steps done the same way: a \textbf{Skill}.\\
-    Fresh pair of eyes, a big messy job, or work that can run at the same time:
-    a \textbf{sub-agent}.}
-  \likethis{a checklist for yourself vs asking a colleague to referee.}
+  \inplainwords{Use a \textbf{Skill} when the same steps should be reused in place.\\
+    Use a \textbf{sub-agent} when the piece of work needs its own focus, its own
+    files, or would crowd the main conversation.}
+  \likethis{the sample-restrictions checklist in this chat, versus a research
+    assistant who redoes the sample, rebuilds the figure, or reviews the cleaning.}
 \end{frame}
 
 \begin{frame}{Card--Krueger: two tasks}
@@ -154,12 +170,12 @@ description: Use after any change to the Card-Krueger sample.
     \end{column}
     \begin{column}{0.47\textwidth}
       \begin{block}{Sub-agent}
-        ``Independently check my data coding.''
+        ``Redo the sample, or rebuild the parallel-trends figure, and hand back the file.''
       \end{block}
     \end{column}
   \end{columns}
-  \vspace{0.8em}
-  You stay in the main chat: you decide, approve and merge.
+  \vspace{0.7em}
+  You set the bounds. Inside them, the sub-agent can decide. You still approve the merge.
 \end{frame}
 
 % Answer key: 1 Skill, 2 sub-agent, 3 Skill, 4 sub-agent, 5 Skill, 6 sub-agent.
@@ -176,7 +192,7 @@ description: Use after any change to the Card-Krueger sample.
     3 & Write the sample-restrictions note the same way & \\
     4 & Review literature claims while I fix code & \\
     5 & Check the folder reproduces from a fresh start & \\
-    6 & Referee my pull request with fresh eyes & \\
+    6 & Review my pull request in its own conversation & \\
     \bottomrule
   \end{tabular}
 \end{frame}

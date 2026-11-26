@@ -5,9 +5,9 @@
 
 ## Using sub-agents (10:15–10:50)
 
-**Say:** call the helper by name, give it one narrow job, keep it read-only, read its report before you act. Two referees who don't talk to each other.
+**Say:** name the sub-agent and the bounds for this piece of work. It works in its own conversation and hands back what the job needs. These two reviewers may only read, and a review is what they hand back. You decide what to keep. Think of two research assistants: one reviews the cleaning, one checks the citations, and neither sees the other's notes.
 
-**Referee 1:**
+**Reviewer 1:**
 
 ```text
 Use the data-reviewer sub-agent on examples/card-krueger-toy/.
@@ -15,7 +15,7 @@ Read only. Report panel balance, missing values and NJ/PA coding problems,
 most serious first.
 ```
 
-**Referee 2:**
+**Reviewer 2:**
 
 ```text
 Use the literature-reviewer sub-agent on examples/card-krueger-toy/README.md,
@@ -23,7 +23,7 @@ examples/card-krueger-toy/faults/citation_mismatch.md and
 references/bibliography.bib. Read only. Flag any claim the sources do not support.
 ```
 
-Expected: referee 2 flags that the toy DiD is cited as if it were Card and Krueger (1994).
+Expected: reviewer 2 flags that the toy DiD is cited as if it were Card and Krueger (1994).
 
 **Say:** you decide. Log one finding you accept and one you reject in [`notes/orchestration_log.md`](../notes/orchestration_log.md).
 

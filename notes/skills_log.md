@@ -20,7 +20,7 @@ Fill during Slot 2 (Thu 11:00–12:00, Fri 09:35–10:15).
 
 - Job:
 - Limits:
-- Report format:
+- What it hands back:
 
 ## Skill or sub-agent?
 

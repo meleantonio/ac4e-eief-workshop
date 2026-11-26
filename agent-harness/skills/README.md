@@ -1,11 +1,11 @@
 # Skills
 
-A Skill is a saved set of instructions for a task you do often. The agent follows
-it the same way every time, and you can share it with coauthors.
+A Skill is a repeatable set of instructions followed in the same conversation.
+The agent follows it the same way every time, and you can share it with coauthors.
 
-**Use a Skill** when the same steps should be done the same way each time. If you
-need a fresh pair of eyes or a big separate job instead, use a sub-agent (see
-[`../subagents/README.md`](../subagents/README.md)).
+**Use a Skill** when the same steps should be reused in place. When the piece of
+work needs its own focus, its own files, or would crowd the main conversation,
+use a sub-agent (see [`../subagents/README.md`](../subagents/README.md)).
 
 The Skills live in one folder per tool, with identical files:
 

@@ -37,7 +37,7 @@ By the end you can:
 4. Ask for a to-do list before any action, edit it, and let the agent run one step.
 5. Run a Skill and explain why saved instructions beat retyped prompts.
 6. Write, test and fix a Skill of your own.
-7. Explain how a sub-agent (another worker) differs from a Skill (instructions).
+7. Explain how a sub-agent (another agent with its own conversation that carries out a piece of work) differs from a Skill (repeatable instructions followed in the same conversation).
 8. Decide whether a task calls for a Skill or a sub-agent.
 9. Run two read-only sub-agents and decide which findings to accept.
 10. Split a job into parts that share no files and assign them to different agents.

@@ -367,9 +367,9 @@ The header lines between the dashes: its name and when to use it.
 
 *[Fri 09:35–09:55]*
 
-> **In plain words:** A sub-agent is a separate helper agent with its own blank notebook and one narrow job. It reports back a summary. A Skill is instructions; a sub-agent is another worker.
+> **In plain words:** A sub-agent is another agent you hand a piece of the work. It has its own conversation and its own instructions. Inside the bounds you set, it can read, write, check, and decide. It hands back whatever that job needs: a cleaned file, a figure, a review, a pull request, or a short report. A summary is one possible result, not the definition. A Skill is a repeatable set of instructions followed in the same conversation. A sub-agent carries out the piece of work on its own, in a fresh context.
 
-**Think of it as:** a recipe (Skill) vs a sous-chef you send to taste the sauce (sub-agent).
+**Think of it as:** a research assistant who redoes the Card–Krueger sample, rebuilds the parallel-trends figure, or reviews the cleaning, and hands the result back.
 
 ---
 
@@ -377,12 +377,12 @@ The header lines between the dashes: its name and when to use it.
 
 |  | Skill | Sub-agent |
 | --- | --- | --- |
-| What it is | Instructions | Another worker |
-| Memory | Shares your chat | Its own blank notebook |
-| Gives back | The finished task | A short report |
-| Our example | `replication-checker` | `data-reviewer` |
+| What it is | Repeatable instructions, in this conversation | Another agent, with its own instructions |
+| Where | Same conversation | Its own conversation (a fresh context) |
+| Hands back | The steps, done in place | A file, a figure, a review, a pull request, or a short report |
+| Example | `replication-checker` | `data-reviewer`, or the parallel-trends figure |
 
-`data-reviewer` looks only at panel balance and NJ/PA coding. It never edits.
+Inside the bounds you set, it can read, write, check, and decide. A summary is one possible result, not the definition. `data-reviewer` is bounded to a review of panel balance and NJ/PA coding: no edits.
 
 ---
 
@@ -392,9 +392,9 @@ The header lines between the dashes: its name and when to use it.
 
 Open `.claude/agents/data-reviewer.md` and mark three things:
 
-1. **The job:** what does it look at?
-2. **The limits:** what is it not allowed to do?
-3. **The report:** what does it hand back?
+1. **The job:** what piece of work is this?
+2. **The limits:** what bounds did we set?
+3. **What it hands back:** a review. Name one other result a sub-agent can hand back.
 
 ---
 
@@ -402,10 +402,10 @@ Open `.claude/agents/data-reviewer.md` and mark three things:
 
 *[Fri 09:55–10:15]*
 
-> **In plain words:** Same steps done the same way: a **Skill**.  
-> Fresh pair of eyes, a big messy job, or work that can run at the same time: a **sub-agent**.
+> **In plain words:** Use a **Skill** when the same steps should be reused in place.  
+> Use a **sub-agent** when the piece of work needs its own focus, its own files, or would crowd the main conversation.
 
-**Think of it as:** a checklist for yourself vs asking a colleague to referee.
+**Think of it as:** the sample-restrictions checklist in this chat, versus a research assistant who redoes the sample, rebuilds the figure, or reviews the cleaning.
 
 ---
 
@@ -413,9 +413,9 @@ Open `.claude/agents/data-reviewer.md` and mark three things:
 
 | Skill | Sub-agent |
 | --- | --- |
-| "Recompute the DiD the same way each time." | "Independently check my data coding." |
+| "Recompute the DiD the same way each time." | "Redo the sample, or rebuild the parallel-trends figure, and hand back the file." |
 
-You stay in the main chat: you decide, approve and merge.
+You set the bounds. Inside them, the sub-agent can decide. You still approve the merge.
 
 ---
 
@@ -432,7 +432,7 @@ You stay in the main chat: you decide, approve and merge.
 | 3 | Write the sample-restrictions note the same way | |
 | 4 | Review literature claims while I fix code | |
 | 5 | Check the folder reproduces from a fresh start | |
-| 6 | Referee my pull request with fresh eyes | |
+| 6 | Review my pull request in its own conversation | |
 
 ---
 
@@ -452,19 +452,19 @@ You stay in the main chat: you decide, approve and merge.
 
 *[10:15–10:50]*
 
-> **In plain words:** Call the helper by name, give it one narrow instruction, keep it read-only and read its report before you act. You decide what to do with the report.
+> **In plain words:** Name the sub-agent and the bounds for this piece of work. It works in its own conversation and hands back what the job needs. These two reviewers may only read; a review is what they hand back. You decide what to keep.
 
-**Think of it as:** sending a draft to two referees who don't talk to each other.
+**Think of it as:** two research assistants. One reviews the cleaning, one checks the citations. Neither sees the other's notes.
 
 ---
 
-# Card–Krueger: two referee reports
+# Card–Krueger: two reviews
 
 `Use the data-reviewer sub-agent on examples/card-krueger-toy/. Read only. Report panel balance and NJ/PA coding.`
 
 `Use the literature-reviewer sub-agent on the same folder. Read only. Check the claims against the references.`
 
-- Two separate notebooks: neither sees the other's report.
+- Two separate conversations: neither sees the other's review.
 - Where they agree, look closer. Where they disagree, you decide.
 
 ---
@@ -473,11 +473,11 @@ You stay in the main chat: you decide, approve and merge.
 
 *Your turn · 10:15–10:50*
 
-1. Run both helpers on the Card–Krueger folder.
+1. Run both reviewers on the Card–Krueger folder.
 2. Log one finding you accept and one you reject in `notes/orchestration_log.md`.
 3. Check that no file changed.
 
-Helper won't start? Paste its instructions into a fresh chat and say "read only".  
+Reviewer won't start? Paste its instructions into a fresh chat and say "read only".  
 Guide: `demos/slot3_subagents_vc.md` · `exercises/07_slot3_subagents_vc.md`
 
 ---
