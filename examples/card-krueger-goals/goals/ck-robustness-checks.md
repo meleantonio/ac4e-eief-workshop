@@ -1,5 +1,7 @@
 # Robustness checks for the Card–Krueger DiD
 
+
+Ciao
 **Goal:** running `examples/card-krueger-toy/src/did_analysis.py` prints the main
 DiD and two labelled robustness versions, each with its sample count.
 
