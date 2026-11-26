@@ -10,11 +10,11 @@ One page: the 14 concepts, the words we use, and the one example.
 | Version control | Every saved version with a note; GitHub adds review before changes are accepted. | Slot 1 |
 | `AGENTS.md` + privacy | A rules file the agent reads first. Anonymize, authorize, keep it on the machine. | Slot 1 |
 | To-do lists | The agent writes its steps first; you edit them before it acts. | Slot 1 |
-| Skills | Saved instructions the agent follows the same way every time. | Slot 2 |
+| Skills | A repeatable set of instructions followed in the same conversation. | Slot 2 |
 | Create a Skill | A folder, one short file: name, when to use it, numbered steps. | Slot 2 |
-| Sub-agent vs Skill | A sub-agent is another worker with one narrow job; a Skill is instructions. | Slot 2 |
-| Rule of thumb | Same steps → Skill. Fresh eyes, big job, or parallel work → sub-agent. | Slot 2 |
-| Using sub-agents | Call by name, one job, read-only, read the report before acting. | Slot 3 |
+| Sub-agent vs Skill | A sub-agent is another agent, with its own conversation, that carries out a piece of work and hands back the result. A Skill stays in this conversation. | Slot 2 |
+| Rule of thumb | Same steps reused in place → Skill. Own focus, own files, or it would crowd the chat → sub-agent. | Slot 2 |
+| Using sub-agents | Name the agent and the bounds. A review, a file, or a figure can come back. | Slot 3 |
 | Orchestrating | Split the job, hand out parts with no shared files, put results together. | Slot 3 |
 | Issue-board swarm | Jobs as GitHub cards; agents return pull requests for review. | Slots 3–4 |
 | Goal | One checkable sentence describing the finished state. | Slot 4 |
@@ -32,8 +32,8 @@ One page: the 14 concepts, the words we use, and the one example.
 | pull request | a request to fold a separate copy into the main one, with a review page |
 | issue | a to-do card on GitHub |
 | `AGENTS.md` | the rules file |
-| Skill | saved instructions |
-| sub-agent | a helper agent |
+| Skill | repeatable instructions followed in the same conversation |
+| sub-agent | another agent you hand a piece of the work; it has its own conversation and hands back the result |
 | swarm | a team of agents working at once |
 | goal | a checkable finish line |
 | acceptance criterion | a done-when check |

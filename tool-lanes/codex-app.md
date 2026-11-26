@@ -22,6 +22,8 @@ Install steps are in [`SETUP.md`](../SETUP.md).
 
 - Set the chat to read-only before you call a reviewer: a Codex sub-agent follows
   the permissions of the chat that calls it (see `agent-harness/codex/README.md`).
+  A review is one result. When the job is a cleaned file or a figure, allow the
+  writes that job needs.
 - Read the list of changes before accepting edits.
 - Run the check command before you merge.
 

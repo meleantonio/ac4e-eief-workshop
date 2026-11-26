@@ -33,18 +33,18 @@ Typical fix after the first run: the agent paraphrased the counts instead of quo
 ## C. data-reviewer
 
 - **Job:** review documentation, panel balance, missing values and NJ/PA coding.
-- **Limits:** may read and search; cannot edit files or run commands.
-- **Report:** a list of findings for the human to act on.
+- **Limits:** this job may read and search; it cannot edit files or run commands. That bound is the job, not the definition of a sub-agent.
+- **What it hands back:** a review (a list of findings). A cleaned file, the parallel-trends figure, or a pull request is another possible result. A summary is one possible result, not the definition.
 
 ## D. Skill or sub-agent
 
 | # | Answer | Why |
 | --- | --- | --- |
-| 1 | Skill | Same steps every time |
-| 2 | Sub-agent | Fresh pair of eyes |
-| 3 | Skill | Same format every time |
-| 4 | Sub-agent | Runs while you keep working |
-| 5 | Skill | Same steps every time |
-| 6 | Sub-agent | Big, messy search; only the summary comes back |
+| 1 | Skill | Same steps, reused in place |
+| 2 | Sub-agent | Needs its own focus: it should not share your reasoning |
+| 3 | Skill | Same steps, reused in place |
+| 4 | Sub-agent | Own focus; it would crowd the main conversation |
+| 5 | Skill | Same steps, reused in place |
+| 6 | Sub-agent | Own focus; the search would crowd the main conversation. It hands back the list of mentions |
 
-Reasonable disagreement: task 2 could be a Skill if you always check coding the same way; it becomes a sub-agent when you want someone who has not seen your reasoning.
+Reasonable disagreement: task 2 could be a Skill if you always check coding the same way, in this conversation. It is a sub-agent when it needs its own focus and must not see your reasoning.

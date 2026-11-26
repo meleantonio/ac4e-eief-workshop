@@ -1,6 +1,6 @@
 # Reference — Exercise 07
 
-## A. Two referees
+## A. Two reviewers
 
 Typical `data-reviewer` findings: the main panel is balanced (each store has one before and one after row); NJ is the treatment group and PA the comparison; the README should state the sample restriction more clearly.
 

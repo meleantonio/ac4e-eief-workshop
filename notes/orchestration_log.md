@@ -2,14 +2,14 @@
 
 Fill during Slot 3 (Fri 10:15–12:00) and the swarm review (Fri 14:00–14:10).
 
-## Two referees
+## Two reviewers
 
-| Helper | Finding | Accept or reject | Why |
+| Reviewer | Finding | Accept or reject | Why |
 | --- | --- | --- | --- |
 | `data-reviewer` | | | |
 | `literature-reviewer` | | | |
 
-Did either helper change a file? Yes / No (it should be No)
+Did either reviewer change a file? Yes / No (for this job, it should be No)
 
 ## Split "replicate and extend Card–Krueger"
 

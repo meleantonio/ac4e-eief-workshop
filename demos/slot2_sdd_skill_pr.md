@@ -48,16 +48,16 @@ One participant reads their Skill aloud. The room names one unclear step.
 
 ## Sub-agent vs Skill (Fri 09:35–09:55)
 
-**Say:** a sub-agent is a separate helper with its own blank notebook and one narrow job. It reports back a summary. A Skill is instructions; a sub-agent is another worker. Recipe versus sous-chef.
+**Say:** a sub-agent is another agent you hand a piece of the work. It has its own conversation and its own instructions. Inside the bounds you set, it can read, write, check, and decide. It hands back whatever that job needs: a cleaned file, a figure, a review, a pull request, or a short report. A summary is one possible result, not the definition. A Skill is a repeatable set of instructions followed in the same conversation. A sub-agent is a separate agent with a fresh context that carries out a piece of work on its own. Think of a research assistant who redoes the Card–Krueger sample, rebuilds the parallel-trends figure, or reviews the cleaning, and hands the result back.
 
 Open [`.claude/agents/data-reviewer.md`](../.claude/agents/data-reviewer.md) and mark three things:
 
-- **Job:** panel balance, missing values, NJ/PA group coding, documentation.
-- **Limits:** it can read and search; it cannot edit files or run commands.
-- **Report:** a short list of findings for you to act on.
+- **Job:** a review of panel balance, missing values, NJ/PA group coding, and documentation.
+- **Limits:** this job may read and search; it cannot edit files or run commands. That bound is the job, not the definition of a sub-agent.
+- **What it hands back:** a review. A cleaned file, a figure, or a pull request is another possible result.
 
 ## Rule of thumb (Fri 09:55–10:15)
 
-**Say:** same steps done the same way → Skill. A fresh pair of eyes, a big messy job, or work that can run at the same time → sub-agent.
+**Say:** use a Skill when the same steps should be reused in place. Use a sub-agent when the piece of work needs its own focus, its own files, or would crowd the main conversation.
 
 Show the six tasks from [`exercises/06_slot2_sdd_skill_pr.md`](../exercises/06_slot2_sdd_skill_pr.md) part D. Participants sort them, then compare with a neighbour. Take one disagreement from the room.

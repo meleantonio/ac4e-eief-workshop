@@ -27,6 +27,10 @@ Official docs: [Claude Code skills](https://code.claude.com/docs/en/skills).
 
 ## Subagents
 
+A sub-agent is another agent you hand a piece of the work. It has its own conversation and its own instructions. Inside the bounds you set, it can read, write, check, and decide. It hands back whatever that job needs: a cleaned file, a figure, a review, a pull request, or a short report. A summary is one possible result, not the definition. A Skill is a repeatable set of instructions followed in the same conversation.
+
+The reviewers below are bounded to a review. Think of a research assistant who redoes the Card–Krueger sample, rebuilds the parallel-trends figure, or reviews the cleaning, and hands the result back.
+
 Example prompt:
 
 ```text

@@ -29,8 +29,10 @@ Write your answers in [`notes/skills_log.md`](../notes/skills_log.md).
 Read [`.claude/agents/data-reviewer.md`](../.claude/agents/data-reviewer.md). Write down:
 
 - its **job** (one line);
-- its **limits** (what it cannot do);
-- its **report format**.
+- its **limits** (the bounds set for this job);
+- **what it hands back**.
+
+A review is what this sub-agent hands back. Another sub-agent can hand back a cleaned file, the parallel-trends figure, or a pull request. A summary is one possible result, not the definition.
 
 ## D. Skill or sub-agent? (Fri 09:55–10:15)
 
@@ -45,13 +47,13 @@ Sort each task, then compare with a neighbour:
 | 5 | Format the results table the same way for every draft | |
 | 6 | Search the whole project folder for every mention of the sample restriction | |
 
-Rule: same steps, same way → Skill. Fresh eyes, big messy job, or runs at the same time → sub-agent.
+Rule: use a Skill when the same steps should be reused in place. Use a sub-agent when the piece of work needs its own focus, its own files, or would crowd the main conversation.
 
 ## Done when
 
 - [ ] One `replication-checker` rating with the command it ran.
 - [ ] Your Skill file exists, ran once, and has one fix.
-- [ ] Job, limits and report of `data-reviewer` written down.
+- [ ] Job, limits, and what `data-reviewer` hands back, written down.
 - [ ] Six tasks sorted, with one reason you disagreed with your neighbour.
 
 Reference: [`solutions/06_slot2_sdd_skill_pr_solution.md`](solutions/06_slot2_sdd_skill_pr_solution.md).

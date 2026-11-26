@@ -1,18 +1,32 @@
 # Sub-agents
 
-A sub-agent is a separate helper agent with its own blank notebook and one narrow
-job. It reports back a summary; you decide what to do with it.
+A sub-agent is another agent you hand a piece of the work. It has its own
+conversation and its own instructions. Inside the bounds you set, it can read,
+write, check, and decide. It hands back whatever that job needs: a cleaned file,
+a figure, a review, a pull request, or a short report. A summary is one possible
+result, not the definition.
 
-**Use a sub-agent** for a fresh pair of eyes, a big messy job, or work that can run
-at the same time. If the same steps just need doing the same way each time, write a
-Skill instead (see [`../skills/README.md`](../skills/README.md)).
+A Skill is a repeatable set of instructions followed in the same conversation.
+A sub-agent is a separate agent with a fresh context that carries out a piece of
+work on its own.
+
+**Use a Skill** when the same steps should be reused in place. **Use a sub-agent**
+when the piece of work needs its own focus, its own files, or would crowd the
+main conversation (see [`../skills/README.md`](../skills/README.md)).
+
+Think of a research assistant who redoes the Card–Krueger sample, rebuilds the
+parallel-trends figure, or reviews the cleaning, and hands the result back.
 
 ## How to use one
 
-1. Call it by name: "Use `data-reviewer` to review `examples/card-krueger-toy/`."
-2. Give it one narrow instruction.
-3. Keep it read-only.
-4. Read its report before you act.
+1. Call it by name and hand it one piece of work: "Use `data-reviewer` on `examples/card-krueger-toy/`."
+2. Set the bounds: what it may read, write, check, or decide.
+3. It works in its own conversation.
+4. Read what it hands back before you act.
+
+The reviewers in this folder are bounded to read-only reviews. That bound is the
+job, not the definition. A sub-agent can also write when the card asks for a
+cleaned file or the parallel-trends figure.
 
 ## Where they live
 
@@ -20,9 +34,10 @@ Skill instead (see [`../skills/README.md`](../skills/README.md)).
 - Cursor: copy `../cursor/subagents/` into `.cursor/agents/`
 - Codex: copy `../codex/agents/` into `.codex/agents/`
 
-## Keeping them read-only
+## Keeping the reviewers read-only
 
-Each tool does this differently:
+`data-reviewer`, `literature-reviewer` and `pr-reviewer` are bounded to a review.
+Each tool does that differently:
 
 - **Claude Code:** the files allow only reading tools (`Read`, `Grep`, `Glob`) and
   block editing and running commands.

@@ -20,7 +20,7 @@ Each slot's clock slide (pages 5, 20, 34, 44) is counted with the first block of
 | Skills: why | Thu 11:00–11:25 | 20–23 | Read, then run `replication-checker` on the Card–Krueger folder | `.claude/skills/replication-checker/SKILL.md`, `demos/slot2_sdd_skill_pr.md`, `exercises/06_slot2_sdd_skill_pr.md` |
 | Create a Skill | 11:25–11:55 | 24–26 | Write `sample-restrictions-note`, run once, fix one step | `templates/skill_template.md`, `.claude/skills/sample-restrictions-note/SKILL.md`, `examples/card-krueger-toy/src/panel_workflow.py` |
 | Wrap / recap | Thu 11:55–12:00, Fri 09:30–09:35 | 27 | Overnight: draft one Skill | `docs/between_sessions.md` |
-| Sub-agent vs Skill | Fri 09:35–09:55 | 28–30 | Read `data-reviewer`: job, limits, report | `.claude/agents/data-reviewer.md` |
+| Sub-agent vs Skill | Fri 09:35–09:55 | 28–30 | Read `data-reviewer`: job, limits, what it hands back | `.claude/agents/data-reviewer.md` |
 | Rule of thumb | 09:55–10:15 | 31–33 | Sort six Card–Krueger tasks into Skill or sub-agent | slide 33 (answer key in the source comment) |
 | Using sub-agents | 10:15–10:50 | 34–37 | Run `data-reviewer` and `literature-reviewer`; compare reports | `.claude/agents/data-reviewer.md`, `.claude/agents/literature-reviewer.md`, `demos/slot3_subagents_vc.md`, `exercises/07_slot3_subagents_vc.md`, `notes/orchestration_log.md` |
 | Orchestrating and swarms | 10:50–11:15 | 38–40 | Writer + checker on different files; split the job into three | `examples/card-krueger-swarm/README.md` |
