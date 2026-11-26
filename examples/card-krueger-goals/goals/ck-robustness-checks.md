@@ -42,3 +42,5 @@ python3 -m pytest examples/card-krueger-toy/tests examples/mini-economics/tests
 Edit only `src/did_analysis.py`, `README.md`, and new checks in
 `tests/test_did_analysis.py`. Never change existing checks. A trimmed estimate is
 not more credible without an economic reason.
+explain me what you have done
+create a word file with main results

@@ -1,31 +1,27 @@
-# Claude Code Adapter — AC4E EIEF / Luiss
+# CLAUDE.md
 
-Claude Code is the **primary** demo lane for this faculty workshop.
+All project rules are in `AGENTS.md`, imported here so Claude Code loads them:
 
-## Use With
+@AGENTS.md
 
-Read and follow [`AGENTS.md`](AGENTS.md). This file only adds Claude-specific path notes.
+## In brief
 
-## Local Paths
+- **Project:** synthetic Card–Krueger minimum-wage panel (NJ vs PA, 1992) used as the
+  teaching example for *Agentic Coding for Economists*. No research claims.
+- **Folder map:** see `AGENTS.md`. Research code is in `examples/card-krueger-toy/`.
+- **Version control:** branch from `main`, one issue per branch, human merges.
+  Ask before pushing. See `docs/agent-rules/version_control.md`.
+- **Verification:** run the pytest check command and quote its output before saying
+  a task is done. See `docs/agent-rules/verification.md`.
 
-| Piece | Where in this repo | Claude Code expectation |
-| --- | --- | --- |
-| Project rules | `AGENTS.md` + this file | Keep both at repo root |
-| Skills | `.claude/skills/*/SKILL.md` (portable copies in `agent-harness/claude/skills/`) | Invoke by name or let Claude select |
-| Subagents | `.claude/agents/*.md` (portable in `agent-harness/claude/agents/`) | Delegate reviewer roles explicitly |
-| MCP | `agent-harness/claude/mcp/mcp.json.example` → project `.mcp.json` | Optional (not in the room) |
-| Hooks | `.claude/hooks/` + `settings.example.json` | Optional |
+## Claude Code specifics
 
-## Workshop defaults
+| Piece | Path |
+| --- | --- |
+| Skills | `.claude/skills/*/SKILL.md` (e.g. `replication-checker`, `sample-restrictions-note`) |
+| Sub-agents | `.claude/agents/*.md` (`data-reviewer`, `literature-reviewer`, `pr-reviewer`, `loop-verifier`) |
+| Hooks | `.claude/hooks/` + `.claude/settings.example.json` (optional) |
+| MCP | `agent-harness/claude/mcp/mcp.json.example` → `.mcp.json` (optional) |
 
-- Prefer **read-only** prompts until the issue acceptance criteria are clear.
-- For the checkpoint PR, keep the branch scoped to one issue.
-- Never mark replication green without a command run or equivalent evidence.
-- Confidential data: refuse. Point the human to `docs/privacy_boundary.md`.
-
-## CLI smoke check (Slot 1)
-
-```bash
-claude --version
-# or the install's equivalent; record the exact command in notes/cli_lane.md
-```
+- Prefer read-only prompts until the issue's acceptance criteria are clear.
+- Confidential data: refuse and point to `docs/privacy_boundary.md`.
